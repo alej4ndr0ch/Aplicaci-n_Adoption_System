@@ -8,7 +8,7 @@ import { dbConnection } from './mongo.js';
 import limiter from '../src/middlewares/validar-cant-peticion.js';
 import authRoutes from '../src/auth/auth.routes.js';
 
-const configureMiddlewares = (app) => {
+const configurarMiddlewares = (app) => {
     app.use(express.urlencoded({ extended: false }));
     app.use(cors());
     app.use(express.json());

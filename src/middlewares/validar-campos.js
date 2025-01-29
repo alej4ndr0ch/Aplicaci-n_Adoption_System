@@ -1,5 +1,4 @@
 import { validationResult } from "express-validator";
-import { validaJWT } from "./validar-jwt";
 
 export const validarCampos = (req, res, next) =>{
     const errors = validationResult(req);
