@@ -5,8 +5,10 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import { dbConnection } from './mongo.js';
-import limiter from '../src/middlewares/validar-cant-peticion.js';
-import authRoutes from '../src/auth/auth.routes.js';
+import limiter from '../src/middlewares/validar-cant-peticiones.js';
+import authRoutes from '../src/auth/auth.routes.js'
+import userRoutes from '../src/users/user.routes.js'
+import petRoutes from '../src/pet/pet.routes.js'
 
 const middlewares = (app) => {
     app.use(express.urlencoded({ extended: false }));
@@ -17,16 +19,18 @@ const middlewares = (app) => {
     app.use(limiter);
 }
 
-const configurarRutas = (app) => {
-    app.use('/adoptionSystem/v1/auth', authRoutes);
+const routes = (app) => {
+    app.use("/adoptionSystem/v1/auth", authRoutes);
+    app.use("/adoptionSystem/v1/users", userRoutes);
+    app.use("/adoptionSystem/v1/pets", petRoutes);
 }
 
 const conectarDB = async () => {
     try{
         await dbConnection();
-        console.log("Conexion a la base de datos exitosa");
+        console.log("Conexión a la base de datos exitosa");
     }catch(error){
-        console.error('Error conectando a la base datos', error);
+        console.error('Error conectando a la base de datos', error);
         process.exit(1);
     }
 }
