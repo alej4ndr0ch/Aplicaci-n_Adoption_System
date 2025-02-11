@@ -2,29 +2,30 @@ import { Schema, model } from "mongoose";
 
 const DateSchema = Schema({
     name : {
-        type : String,
-        required : true
+        type: Schema.Types.ObjectId,
+        ref: 'pet',
+        required: true
     },
     description : {
         type : String,
         required : true
     },
-    time : {
-        type: Number,
+    date : {
+        type: String,
         required: true
     },
     place : {
         type : String,
         required : true
     }, 
-    email : {
-        type : String,
-        required : true
-    },
-    keeper: {
+    user: {
         type: Schema.Types.ObjectId,
-        ref: 'pet',
+        ref: 'user',
         required: true
+    },
+    status: {
+        type: Boolean,
+        default: true
     }
 },
 {

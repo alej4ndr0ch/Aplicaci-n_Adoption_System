@@ -43,7 +43,7 @@ router.delete(
     "/:id",
     [
         validarJWT,
-        check("id", "No es un ID valido").isMongoId(),
+        check("id", "No es un ID válido").isMongoId(),
         validarCampos
     ],
     deletePet

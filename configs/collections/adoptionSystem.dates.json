@@ -1,0 +1,21 @@
+[{
+  "_id": {
+    "$oid": "67ab834a70f03a6deeb80201"
+  },
+  "name": {
+    "$oid": "67ab5b94827bdb90dab6082d"
+  },
+  "description": "Revison de perro",
+  "date": "10am",
+  "place": "Consultorio",
+  "user": {
+    "$oid": "67ab5b2b827bdb90dab60828"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-11T17:05:14.208Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-11T17:05:14.208Z"
+  }
+}]

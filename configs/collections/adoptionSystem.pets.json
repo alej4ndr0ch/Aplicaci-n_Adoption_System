@@ -1,0 +1,76 @@
+[{
+  "_id": {
+    "$oid": "67ab5451b7e7d451f8ca6ba2"
+  },
+  "name": "Canela",
+  "description": "schaunwser",
+  "age": 14,
+  "type": "PERRO",
+  "keeper": {
+    "$oid": "67ab5308b7e7d451f8ca6b93"
+  },
+  "status": false,
+  "createdAt": {
+    "$date": "2025-02-11T13:44:49.249Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-11T14:25:22.288Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ab56edb7e7d451f8ca6bac"
+  },
+  "name": "Perry",
+  "description": "Golden Retriver",
+  "age": 10,
+  "type": "PERRO",
+  "keeper": {
+    "$oid": "67ab5308b7e7d451f8ca6b93"
+  },
+  "status": false,
+  "createdAt": {
+    "$date": "2025-02-11T13:55:57.613Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-11T14:11:54.768Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ab5b94827bdb90dab6082d"
+  },
+  "name": "Manry",
+  "description": "Perro salchica",
+  "age": 8,
+  "type": "PERRO",
+  "keeper": {
+    "$oid": "67ab5b2b827bdb90dab60828"
+  },
+  "status": false,
+  "createdAt": {
+    "$date": "2025-02-11T14:15:48.882Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-11T14:33:24.117Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ab88c750045b7a9218c741"
+  },
+  "name": "Kaiser",
+  "description": "Hosky",
+  "age": 5,
+  "type": "PERRO",
+  "keeper": {
+    "$oid": "67ab883e50045b7a9218c73c"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-11T17:28:39.749Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-11T17:28:39.749Z"
+  }
+}]

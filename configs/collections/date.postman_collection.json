@@ -1,0 +1,41 @@
+{
+	"info": {
+		"_postman_id": "f1502612-cf5a-4619-ad61-600680c363df",
+		"name": "date",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42042928"
+	},
+	"item": [
+		{
+			"name": "Post dates",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Manry\",\r\n    \"description\" : \"Revison de perro\",\r\n    \"date\" : \"10am\",\r\n    \"place\" : \"Consultorio\",\r\n    \"email\" : \"pabloochoa@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/dates/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"dates",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

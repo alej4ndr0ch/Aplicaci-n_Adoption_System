@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "f14e66aa-bcf7-47a7-a586-00a5c7d6b44f",
+		"name": "pet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42042928"
+	},
+	"item": [
+		{
+			"name": "Get pets",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/pets/?limite=10&desde=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"pets",
+						""
+					],
+					"query": [
+						{
+							"key": "limite",
+							"value": "10"
+						},
+						{
+							"key": "desde",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update pets",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FiNTMwOGI3ZTdkNDUxZjhjYTZiOTMiLCJpYXQiOjE3MzkyODEyMjIsImV4cCI6MTczOTI4NDgyMn0.1SyajZ-aNXA6NcL6ZtA1-gUgCxWw9VTriZL-ILPeCKI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Canela\",\r\n    \"description\" : \"schaunwser\",\r\n    \"age\" : \"14\",\r\n    \"type\" : \"Perro\",\r\n    \"email\" : \"andremlendres@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/pets/67ab5451b7e7d451f8ca6ba2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"pets",
+						"67ab5451b7e7d451f8ca6ba2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Pets",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FiNWIyYjgyN2JkYjkwZGFiNjA4MjgiLCJpYXQiOjE3MzkyODQwMjQsImV4cCI6MTczOTI4NzYyNH0.R-oSsoJZHrh82NK4F6nizsdP17kq3x_R17j85r1eyAA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/pets/67ab5b94827bdb90dab6082d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"pets",
+						"67ab5b94827bdb90dab6082d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Pets",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FiODgzZTUwMDQ1YjdhOTIxOGM3M2MiLCJpYXQiOjE3MzkyOTQ4MzQsImV4cCI6MTczOTI5ODQzNH0.L8TcVwKkF-PEUQ8MFPq0IqgsGAjQ14H3Ysv_DDe6BM0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Kaiser\",\r\n    \"description\" : \"Hosky\",\r\n    \"age\" : \"5\",\r\n    \"type\" : \"Perro\",\r\n    \"email\" : \"carloscortez@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/pets/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"pets",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Pets Link",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FiNWIyYjgyN2JkYjkwZGFiNjA4MjgiLCJpYXQiOjE3MzkyODUwODksImV4cCI6MTczOTI4ODY4OX0.NjUFu0esmOEJn8VdTz0wSmz-K7zmuH0-CrARHwmMbXg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/pets/67ab5b94827bdb90dab6082d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"pets",
+						"67ab5b94827bdb90dab6082d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

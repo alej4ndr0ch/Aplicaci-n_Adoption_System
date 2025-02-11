@@ -30,6 +30,7 @@ export const savePet = async (req, res) => {
         res.status(500).json({
             success: false,
             message: 'Error al guardar mascota',
+            date,
             error
         })
     }
@@ -73,7 +74,7 @@ export const searchPet = async (req, res) => {
     const { id } = req.params;
 
     try{
-        const pet = await pet.findById(id);
+        const pet = await Pet.findById(id);
 
         if(!pet){
             return res.status(404).json({
@@ -81,6 +82,8 @@ export const searchPet = async (req, res) => {
                 message: "Mascota no encontrada"
             })
         }
+
+        const owner = await User.findById(pet.keeper);
 
         req.status(200).json({
             success: true,
@@ -121,22 +124,22 @@ export const updatePet = async (req, res = response) => {
 }
 
 export const deletePet = async (req, res) => {
+        
     const { id } = req.params;
 
-    try{
-
-        await pet.findByIdAndUpdate(id, { status: false });
+    try {
+        
+        await Pet.findByIdAndUpdate(id, { status: false });
 
         res.status(200).json({
             success: true,
-            message: "Error eliminar existosamente",
-            error
+            message: 'Pet eliminada exitosamente'
         })
 
-    }catch(error){
+    } catch (error) {
         res.status(500).json({
             success: false,
-            message: "Error al eleminar la mascota",
+            message: 'Error al eliminar mascota',
             error
         })
     }

@@ -57,12 +57,12 @@ export const getUserById = async (req, res) => {
 
 export const updateUser = async (req, res = response) => {
     try {
-        console.log("Error");
+        
         const { id } = req.params;
         const { _id, password, email, ...data } = req.body;
 
-        if(!password) {
-            data.password = await hash(password);
+        if(password) {
+            data.password = await hash(password)
         }
 
         const user = await User.findByIdAndUpdate(id, data, {new: true});
