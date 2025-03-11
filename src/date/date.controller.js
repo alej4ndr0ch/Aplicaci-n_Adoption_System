@@ -8,6 +8,7 @@ export const addDate = async (req, res) => {
         const data = req.body;
         const user = await User.findOne({ email: data.email });
         const pet = await Pet.findOne({ name: data.name });
+        
         if(!user){
             return res.status(404).json({
                 success: false,
